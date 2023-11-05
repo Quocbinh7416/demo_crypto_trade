@@ -27,9 +27,27 @@ public class UserController {
         return ResponseEntity.ok(userDTO);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse> tradeCoin(@RequestBody TradeRequest request){
-        ApiResponse apiResponse = userService.tradeCoin(request);
+    @PostMapping("/buy")
+    public ResponseEntity<ApiResponse> buyCoin(@RequestBody TradeRequest request){
+        ApiResponse apiResponse = userService.buyCoin(request);
+        return ResponseEntity.ok(apiResponse);
+    }
+
+    @PostMapping("/sell")
+    public ResponseEntity<ApiResponse> sellCoin(@RequestBody TradeRequest request){
+        ApiResponse apiResponse = userService.sellCoin(request);
+        return ResponseEntity.ok(apiResponse);
+    }
+
+    @GetMapping("/trade-market-info")
+    public ResponseEntity<ApiResponse> getTradeMarketInfo(){
+        ApiResponse apiResponse = userService.getTradeMarketInfo();
+        return ResponseEntity.ok(apiResponse);
+    }
+
+    @GetMapping("/trade-history/{id}")
+    public ResponseEntity<ApiResponse> getUserTradeHistory(@PathVariable Long id){
+        ApiResponse apiResponse = userService.getUserTradeHistory(id);
         return ResponseEntity.ok(apiResponse);
     }
 }

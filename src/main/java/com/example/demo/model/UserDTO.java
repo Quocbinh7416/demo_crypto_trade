@@ -14,6 +14,6 @@ import java.util.Map;
 public class UserDTO implements Serializable {
     private Long id;
     private String name;
-    private Double balanceAmount;
+    private String balanceAmount;
     private Map<String, String> coinData;
 }

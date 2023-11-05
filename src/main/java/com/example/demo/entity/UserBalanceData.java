@@ -12,8 +12,13 @@ public class UserBalanceData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "user_id")
     private Long userId;
+
+    @Column(name = "coin_id")
     private Long coinId;
+
     @Column(precision = 20, scale = 8)
     private BigDecimal amount;
 }

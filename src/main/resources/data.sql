@@ -7,6 +7,6 @@ INSERT INTO crypto_coin (name, symbol, description) VALUES
   ('Ethereum', 'ETHBTC', ''),
   ('Bitcoin', 'BTCUSDT','');
 
-INSERT INTO users_balance_data (user_id, coin_id, amount) VALUES
-  (1, 1, 7.50180000),
-  (1, 2, 0.00199700);
+--INSERT INTO users_balance_data (user_id, coin_id, amount) VALUES
+--  (1, 1, 7.50180000),
+--  (1, 2, 0.00199700);

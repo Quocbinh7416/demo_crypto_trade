@@ -13,5 +13,11 @@ public interface UserService {
 
     UserDTO findUserInfo(Long id);
 
-    ApiResponse tradeCoin(TradeRequest request);
+    ApiResponse buyCoin(TradeRequest request);
+
+    ApiResponse sellCoin(TradeRequest request);
+
+    ApiResponse getTradeMarketInfo();
+
+    ApiResponse getUserTradeHistory(Long id);
 }
